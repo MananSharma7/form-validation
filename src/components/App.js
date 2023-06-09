@@ -50,7 +50,7 @@ const App = () => {
     };
 
     return (
-        <div className="ui segment container" style={{ width: "30%", margin: "30px" }}>
+        <div className="ui segment container" style={{ width: "30%", top: "30px" }}>
             <form onSubmit={handleSubmit}>
                 <InputName value={name} onChange={(e) => setName(e.target.value)} error={errors.name} />
                 <InputEmail value={email} onChange={(e) => setEmail(e.target.value)} error={errors.email} />
