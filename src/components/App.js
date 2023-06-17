@@ -44,8 +44,8 @@ const App = () => {
         const isValid = validateForm();
 
         if (isValid) {
-            alert(`Name: ${name} \nEmail: ${email} \nPassword: ${password}`);
             console.log("Form Submitted:", { name, email, password });
+            alert(`Name: ${name} \nEmail: ${email} \nPassword: ${password}`);
         }
     };
 
