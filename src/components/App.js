@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import InputName from './InputName';
 import InputEmail from './InputEmail';
 import InputPassword from './InputPassword';
-import Analytics from "@vercel/analytics";
 
 const App = () => {
     const [name, setName] = useState('');
@@ -51,17 +50,14 @@ const App = () => {
     };
 
     return (
-        <>
-            <div className="ui segment container" style={{ width: "30%", top: "30px" }}>
-                <form onSubmit={handleSubmit}>
-                    <InputName value={name} onChange={(e) => setName(e.target.value)} error={errors.name} />
-                    <InputEmail value={email} onChange={(e) => setEmail(e.target.value)} error={errors.email} />
-                    <InputPassword value={password} onChange={(e) => setPassword(e.target.value)} error={errors.password} />
-                    <button type="submit" className="ui submit button" style={{ marginTop: "10px" }}>Submit</button>
-                </form>
-            </div>
-            <Analytics />
-        </>
+        <div className="ui segment container" style={{ width: "30%", top: "30px" }}>
+            <form onSubmit={handleSubmit}>
+                <InputName value={name} onChange={(e) => setName(e.target.value)} error={errors.name} />
+                <InputEmail value={email} onChange={(e) => setEmail(e.target.value)} error={errors.email} />
+                <InputPassword value={password} onChange={(e) => setPassword(e.target.value)} error={errors.password} />
+                <button type="submit" className="ui submit button" style={{ marginTop: "10px" }}>Submit</button>
+            </form>
+        </div>
     );
 };
 
